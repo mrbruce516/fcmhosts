@@ -1,0 +1,8 @@
+services:
+  fcmhosts-updater:
+    image: fcmhosts
+    container_name: fcmhosts-updater
+    volumes:
+      - /data/nginx/index/mihomo/phone/android_fcm.yaml:/app/android_fcm.yaml
+    extra_hosts:
+      - "index.home.arpa:192.168.91.4"
