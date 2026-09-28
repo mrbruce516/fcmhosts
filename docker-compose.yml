@@ -4,5 +4,7 @@ services:
     container_name: fcmhosts-updater
     volumes:
       - /data/nginx/index/mihomo/phone/android_fcm.yaml:/app/android_fcm.yaml
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
     extra_hosts:
       - "index.home.arpa:192.168.91.4"
